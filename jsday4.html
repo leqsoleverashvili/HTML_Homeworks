@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="name">name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="surname">surname:</label>
+      <input type="text" id="surname" name="surname" />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+    </form>
+
+    <button id="myBtn">Submit</button>
+    <script>
+      let email = document.getElementById("email");
+      let pass = document.getElementById("password");
+      let name = document.getElementById("name");
+      let surname = document.getElementById("surname");
+      let dob = document.getElementById("dob");
+
+      let mybutton = document.getElementById("myBtn");
+
+      mybutton.addEventListener("click", function () {
+        console.log(
+          email.value,
+          pass.value,
+          name.value,
+          surname.value,
+          dob.value
+        );
+      });
+    </script>
+  </body>
+</html>
