@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="balance">Your balance: <span id="num">0</span></p>
+    <label for="input">Enter the amount:</label>
+    <input id="input" type="number" />
+    <button onclick="deposit(true)">Deposit</button>
+    <button onclick="deposit(false)">Withdraw</button>
+    <script>
+      let num = document.getElementById("num");
+      let input = document.getElementById("input");
+
+      function deposit(isDeposit) {
+        const amount = parseInt(input.value);
+        const currentBalance = parseInt(num.textContent);
+
+        if (amount > 0 && (isDeposit || amount <= currentBalance)) {
+          num.textContent = isDeposit
+            ? currentBalance + amount
+            : currentBalance - amount;
+        } else {
+          alert("Join GOA brokie!");
+        }
+      }
+    </script>
+  </body>
+</html>
