@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="surname">surname:</label>
+      <input type="text" id="surname" name="surname" />
+
+      <label for="Age">Age</label>
+      <input type="number" id="Age" name="Age" required />
+
+      <button type="button" id="button">button</button>
+    </form>
+    <script>
+      let me = {
+        name: "laversi",
+        age: 14,
+        new_name: function () {
+          me.name = "lexo";
+        },
+      };
+      console.log(me);
+
+      let car = {
+        name: "lexus",
+        engine: {
+          engine: "engine",
+        },
+      };
+      console.log(car);
+
+      let name = document.getElementById("name");
+      let surname = document.getElementById("surname");
+      let age = document.getElementById("Age");
+      let button = document.getElementById("button");
+
+      button.addEventListener("click", function () {
+        let user = {
+          name: name.value,
+          surname: surname.value,
+          age: age.value,
+        };
+        console.log(user);
+      });
+    </script>
+  </body>
+</html>
